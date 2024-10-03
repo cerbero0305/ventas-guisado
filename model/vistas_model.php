@@ -1,20 +1,19 @@
 <?php
-class vistaModelo{
-protected static function obtener_vitas($vista){
-    $palabras_permitidas = ['usuario','producto'];
-    if (in_array($vista,$palabras_permitidas)){
-        if(is_file("./views".$vista.".php")){
-            $contenido = "./views".$vista.".php";
-        } else{
-            $contenido ="404";
+    class vistaModelo{
+        protected static function obtener_vistas($vista){
+            $nombres_permitidos = ['inicio', 'tendencias', 'youtube', 'musica', 'yo', 'informacion'];
+            if (in_array($vista, $nombres_permitidos)) {
+                if (is_file("./views/".$vista.".php")) {
+                    $contenido = "./views/".$vista.".php";
+                }else {
+                    $contenido = "404";
+                }
+            }elseif ($vista=="login" || $vista=="index") {
+                $contenido = "login";
+            }else {
+                $contenido = "404";
+            }
+            return $contenido;
         }
-        }elseif ($vista=="login" || $vista=="index"){
-            $contenido ="login";
-        }else{
-            $contenido = "404";
-        }
-        return $contenido;
-        #code 
     }
-}
 ?>
