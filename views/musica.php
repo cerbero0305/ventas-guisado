@@ -43,7 +43,7 @@
                     </div>
                   </div>
                   <div class="card m-0 p-0" style="width: 19%; border: 0; background-color: transparent;">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jb_Z438OT-8?si=F9JATRLOLe5VgNzL" title="YouTube video player" frameborder="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jb_Z438OT-8?si=F9JATRLOLe5VgNzL" title="YouTube video player" frameborder="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div class="card-body p-0">
                       <p class="card-text fs-4 fw-bold">YA TE OLVIDE - TONY ROSADO</p>
                     </div>

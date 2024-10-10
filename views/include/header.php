@@ -6,20 +6,20 @@
     <title>INICIO</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
-<body style="background-color: #5C5555;">
+<body style="background-color: rgb(212, 212, 212);">
     <div id="contenido" style="min-height: 815px">
         <div id="cabecera" class="" style="width: 100%;">  
             <nav class="navbar  row col-12 d-flex" style="background-color: gray; width: 100%;">
               <div class="container-fluid col-6">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="login">
                   <img src="./views/plantilla/img/snaptube.jpg" alt="Logo" style="margin-left: 20px; border-radius: 10px;" width="80" height="70" class="d-inline-block fw-bold fs-3">
                   SNAPTUBE
                 </a>
               </div>
                   <div class="container-fluid col-6" style="justify-content: end;">
                     <form class="d-flex" role="search">
-                      <a href="informacion.html" style="margin-right: 20px;"><img src="./views/plantilla/img/inicio.png"  height="50px" alt=""></a>
-                      <a href="menu.html"><buttons class="btn btn-outline-dark fw-bold fs-4" style="margin-right: 20px;" type="submit">Buscar</buttons></a>
+                      <a href="informacion" style="margin-right: 20px;"><img src="./views/plantilla/img/inicio.png"  height="50px" alt=""></a>
+                      <a href="buscar"><buttons class="btn btn-outline-dark fw-bold fs-4" style="margin-right: 20px;" type="submit">Buscar</buttons></a>
                     </form>
                   </div>
             </nav>          
