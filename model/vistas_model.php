@@ -1,7 +1,7 @@
 <?php
     class vistaModelo{
         protected static function obtener_vistas($vista){
-            $nombres_permitidos = ['inicio', 'tendencias', 'youtube', 'musica', 'yo', 'informacion', 'buscar'];
+            $nombres_permitidos = ['inicio', 'tendencias', 'youtube', 'musica', 'yo', 'informacion', 'buscar','ingresarNuevoProducto'];
             if (in_array($vista, $nombres_permitidos)) {
                 if (is_file("./views/".$vista.".php")) {
                     $contenido = "./views/".$vista.".php";

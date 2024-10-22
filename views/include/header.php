@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INICIO</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script>
+      const base_url = '<?php echo BASE_URL; ?>';
+    </script>
 </head>
 <body style="background-color: rgb(212, 212, 212);">
     <div id="contenido" style="min-height: 815px">
@@ -27,12 +30,10 @@
       <div id="cuerpo" style="display: flex;">
         <div class="menuizquierdo w-15%">
             <div class="btn-group-vertical" role="group" aria-label="Vertical button group" style="height: 815px; background-color: rgb(212, 212, 212); align-items: center; justify-content: center;">
-                <a href="<?php echo BASE_URL ?>inicio" class="btn btn-light fs-4 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;"><img src="./views/plantilla/img/inicio.png" style="height: 40px;" class="img-fluid mr-2" alt="">Inicio</a>
-                <a href="<?php echo BASE_URL ?>tendencias" class="btn btn-light fs-5 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;"><img src="./views/plantilla/img/tendencias.png" style="height: 40px;" class="img-fluid mr-2" alt="">Tendencias</a>
-                <a href="<?php echo BASE_URL ?>youtube" class="btn btn-light fs-4 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;"><img src="./views/plantilla/img/youtube.png" style="height: 40px;" class="img-fluid mr-2" alt="">Youtube</a>
-                <a href="<?php echo BASE_URL ?>musica" class="btn btn-light fs-4 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;"><img src="./views/plantilla/img/musica.png" style="height: 40px;" class="img-fluid mr-2" alt="">Musica</a>
-                <a href="<?php echo BASE_URL ?>yo" class="btn btn-light fs-2 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;">Yo</a>
+                <a href="<?php echo BASE_URL; ?>inicio" class="btn btn-light fs-4 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;"><img src="./views/plantilla/img/inicio.png" style="height: 40px;" class="img-fluid mr-2" alt="">Inicio</a>
+                <a href="<?php echo BASE_URL; ?>tendencias" class="btn btn-light fs-5 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;"><img src="./views/plantilla/img/tendencias.png" style="height: 40px;" class="img-fluid mr-2" alt="">Tendencias</a>
+                <a href="<?php echo BASE_URL; ?>youtube" class="btn btn-light fs-4 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;"><img src="./views/plantilla/img/youtube.png" style="height: 40px;" class="img-fluid mr-2" alt="">Youtube</a>
+                <a href="<?php echo BASE_URL; ?>musica" class="btn btn-light fs-4 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;"><img src="./views/plantilla/img/musica.png" style="height: 40px;" class="img-fluid mr-2" alt="">Musica</a>
+                <a href="<?php echo BASE_URL; ?>yo" class="btn btn-light fs-2 fw-bold" style="margin:20px; padding:0; border-radius:10px; width: 110px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center;">Yo</a>
               </div>
           </div>
-          
-    <?php echo BASE_URL; ?>
