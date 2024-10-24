@@ -10,9 +10,9 @@ class productoModel{
         $this->conexion = $this->conexion->connect();
     }
 
-    public function registrarProducto($codigo, $nombre, $detalle, $precio, $stock, $categoría, $imagen, $proveedor){
+    public function registrarProducto($codigo, $nombre, $detalle, $precio, $stock, $id_categoria, $imagen, $id_proveedor){
         
-        $sql = $this->conexion->query("CALL nombredelprosedimientoalmacenado('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}','{$categoría}','{$imagen}','{$proveedor}')");
+        $sql = $this->conexion->query("CALL insertproducto('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}','{$id_categoria}','{$imagen}','{$id_proveedor}')");
 
         $sql = $sql->fetch_object();
         return $sql;

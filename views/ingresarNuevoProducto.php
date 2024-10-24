@@ -34,8 +34,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="categoría">Categoría</label>
-                        <input type="number" class="form-control" id="categoría" name="categoría" placeholder="Ingresa la categoría">
+                        <label for="id_categoria">id_categoria</label>
+                        <input type="number" class="form-control" id="id_categoria" name="categoría" placeholder="Ingresa la id_categoria">
                     </div>
 
                     <div class="form-group">
@@ -44,8 +44,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="proveedor">Proveedor</label>
-                        <input type="number" class="form-control" id="proveedor" name="proveedor" placeholder="Ingresa tu proveedor">
+                        <label for="id_proveedor">id_proveedor</label>
+                        <input type="number" class="form-control" id="id_proveedor" name="id_proveedor" placeholder="Ingresa tu id_proveedor">
                     </div>
 
 

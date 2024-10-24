@@ -5,11 +5,11 @@ async function registrar_producto() {
     let detalle = document.getElementById('detalle').value;
     let precio = document.getElementById('precio').value;
     let stock = document.getElementById('stock').value;
-    let categoría = document.getElementById('categoría').value;
+    let id_categoria = document.getElementById('id_categoria').value;
     let imagen = document.getElementById('imagen').value;
-    let proveedor = document.getElementById('proveedor').value;
+    let id_proveedor = document.getElementById('id_proveedor').value;
 
-    if (codigo == "" || nombre == "" || detalle  == "" || precio == "" ||  stock == "" || categoría == "" || imagen == "" || proveedor == "") {
+    if (codigo == "" || nombre == "" || detalle  == "" || precio == "" ||  stock == "" || id_categoria == "" || imagen == "" || id_proveedor == "") {
         alert("error, compos vasios");
         return;
     }

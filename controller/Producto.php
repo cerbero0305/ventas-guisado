@@ -13,17 +13,17 @@ if ($tipo=="registrar") {
         $detalle = $_POST['detalle'];
         $precio = $_POST['precio'];
         $stock = $_POST['stock'];
-        $categoría = $_POST['categoría'];
+        $id_categoria = $_POST['id_categoria'];
         $imagen = $_POST['imagen'];
-        $proveedor = $_POST['proveedor'];
+        $id_proveedor = $_POST['id_proveedor'];
         
-        if ($codigo == "" || $nombre == "" || $detalle  == "" || $precio == "" ||  $stock == "" || $categoría == "" || $imagen == "" || $proveedor == "") {
+        if ($codigo == "" || $nombre == "" || $detalle  == "" || $precio == "" ||  $stock == "" || $id_categoria == "" || $imagen == "" || $id_proveedor == "") {
 
             $arr_Respuesta = array('status'=>false,'mensaje'=>'Error, campos vacíos');
 
         } else {
 
-            $arrProducto = $odjProducto->registrarProducto ($codigo, $nombre, $detalle, $precio, $stock, $categoría, $imagen, $proveedor);
+            $arrProducto = $odjProducto->registrarProducto ($codigo, $nombre, $detalle, $precio, $stock, $id_categoria, $imagen, $id_proveedor);
 
             if ($arrProducto->id>0) {
                 $arr_Respuesta = array('status'=>true,'mensaje'=>'Registro Exitosp');
