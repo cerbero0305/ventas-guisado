@@ -23,9 +23,14 @@ async function registrar_producto() {
             cache: 'no-cache',
             body: datos
         });
-
-        console.log(respuesta);
-
+        json =  await respuesta.json();
+        if (json.status) {
+            swal("Registro", json.mensaje,"succes");
+        }else{
+            swal("Registro", json.mensaje,"error");
+        }
+        console.log(json);
+        //console.log(respuesta);
     } catch (e) {
         console.log("Oop, ocurrio un error" + e);
     }
