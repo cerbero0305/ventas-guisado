@@ -1,6 +1,7 @@
 async function registrar_producto() {
     let codigo = document.getElementById('codigo').value;
-    let nombre = document.querySelector('#nombre').value;
+    //let nombre = document.querySelector('#nombre').value;
+    let nombre = document.getElementById('nombre').value;
     let detalle = document.getElementById('detalle').value;
     let precio = document.getElementById('precio').value;
     let stock = document.getElementById('stock').value;
