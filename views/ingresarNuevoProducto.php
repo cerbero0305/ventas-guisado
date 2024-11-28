@@ -34,18 +34,21 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="id_categoria">id_categoria</label>
-                        <input type="number" class="form-control" id="id_categoria" name="categoría" placeholder="Ingresa la id_categoria">
+                <label for="categoria">Categoria: </label>
+                <select name="categoria" id="categoria"class="form control"required>
+                <option>Seleccione</option>
+                </select>
                     </div>
 
                     <div class="form-group">
                         <label for="imagen">Imagen</label>
-                        <input type="text" class="form-control" id="imagen" name="imagen" placeholder="Ingresa tu imagen">
+                        <input type="file" class="form-control" id="imagen" name="imagen" placeholder="Ingresa tu imagen">
                     </div>
 
                     <div class="form-group">
-                        <label for="id_proveedor">id_proveedor</label>
-                        <input type="number" class="form-control" id="id_proveedor" name="id_proveedor" placeholder="Ingresa tu id_proveedor">
+                    <label for="proveedor">proveedor: </label>
+                <select name="proveedor" id="proveedor"class="form control"required>
+                <option>Seleccione</option> </select>
                     </div>
 
 
@@ -57,3 +60,5 @@
 </div>
 
 <script src="<?php echo BASE_URL; ?>views/js/funcionsProducto.js"></script>
+<script >listar_categorias();</script>
+<script >listar_proveedor();</script>

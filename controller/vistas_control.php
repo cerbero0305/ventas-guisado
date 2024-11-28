@@ -1,10 +1,9 @@
 <?php
 
 require_once "./model/vistas_model.php";
-class vistasControlador extends vistaModelo
-{
-    public function obtenerPlantillaControlador()
-    {
+class vistasControlador extends vistaModelo{
+
+    public function obtenerPlantillaControlador(){
         return require_once "./views/plantilla.php";
     }
     public function obtenerVistaControlador()

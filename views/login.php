@@ -24,7 +24,9 @@
                   </div>
             </nav>          
       </div>
-      <div id="cuerpo" style="display: flex; justify-content: center; margin-top: 40px;">
+      <script> const base_url = '<?php echo BASE_URL; ?>'; </script>
+      <div id="fom_login">
+        <div class="cuerpo" style="display: flex; justify-content: center; margin-top: 40px;">
         <div class="login" style="display: flex; background-color: rgb(212, 212, 212); justify-content: center; align-items: center; flex-direction: column; border-radius: 10px; height: 635px; width: 60%;">
             <p class="text-start text-uppercase fs-2 fw-bold m-0 ">Inicio de sesión en snaptube</p>
             <button type="button" class="btn btn-secondary" style="width: 300px; margin: 5px;">Continuar con Google</button>
@@ -34,10 +36,10 @@
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Correo electrónico o nombre de usuario
                 </label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                <input type="email" class="form-control" name="usuario" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
                 <label for="exampleFormControlInput1" class="form-label">Contraseña
                 </label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
+                <input type="email" class="form-control" name="password" id="exampleFormControlInput1" placeholder="Contraseña">
                 <div class="form-check form-switch" style="display: flex; justify-content: center;">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Recordar</label>
@@ -51,6 +53,8 @@
               </div>
         </div>
       </div>
+      </div>
     </div>
+    <script src="<?php echo BASE_URL; ?>views/js/funcions_login.js"></script>
 </body>
 </html>

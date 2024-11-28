@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
       const base_url = '<?php echo BASE_URL; ?>';
     </script>
 </head>
+
 <body style="background-color: rgb(212, 212, 212);">
     <div id="contenido" style="min-height: 815px">
         <div id="cabecera" class="" style="width: 100%;">  
