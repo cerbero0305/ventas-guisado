@@ -8,7 +8,7 @@ if ($tipo=="iniciar_sesion") {
     $usuario = trim($_POST['usuario']);
     $password = trim($_POST['password']);
     $arrResponde = array('status'=> false, 'msg'=>'');
-    $arrPersona = $objPersona->buscarPersonaPorDNI($usuario);7
+    $arrPersona = $objPersona->buscarPersonaPorDNI($usuario);
     //print_r($arrPersona);
     if (empty($arrPersona)) {
         $arrResponde = array('status'=> false, 'msg'=>'Error, usuario no esta registrado en  el sistema');
@@ -33,6 +33,5 @@ if ($tipo == "cerrar_sesion") {
     $arrResponde = array('status' => true);
     echo json_decode($arrPersona);
 }
-
 die;
 ?>
