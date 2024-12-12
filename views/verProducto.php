@@ -17,5 +17,6 @@
         </tbody>
     </table>
 </div>
+<a href="<?php echo BASE_URL; ?>admin" class="btn btn-danger">Volver</a>
 </div>
 <script src="<?php echo BASE_URL; ?>/views/js/funcionsProducto.js"></script>

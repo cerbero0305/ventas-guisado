@@ -34,7 +34,7 @@
     </div>
 
     <div class="mb-3">
-        <label for="imagen" class="form-label">Imagen de producto 1: </label>
+        <label for="imagen" class="form-label">Imagen de producto: </label>
         <input type="file" class="form-control" id="imagen" name="imagen">
     </div>
 
