@@ -34,10 +34,10 @@
                     </div>
 
                     <div class="form-group">
-                <label for="categoria">Categoria: </label>
-                <select name="categoria" id="categoria"class="form control"required>
-                <option>Seleccione</option>
-                </select>
+                        <label for="categoria">Categoria: </label>
+                        <select name="categoria" id="categoria"class="form control"required>
+                        <option>Seleccione</option>
+                    </select>
                     </div>
 
                     <div class="form-group">
@@ -53,6 +53,8 @@
 
 
                     <button type="button" onclick="registrar_producto()" class="btn btn-custom btn-block">Registrar</button>
+                    <button type="button" onclick="registrar_producto()" class="btn btn-custom btn-block">eliminar</button>
+
                 </form>
             </div>
         </div>

@@ -24,7 +24,7 @@
                   <div class="container-fluid col-6" style="justify-content: end;">
                     <form class="d-flex" role="search">
                       <a href="informacion" style="margin-right: 20px;"><img src="./views/plantilla/img/inicio.png"  height="50px" alt=""></a>
-                      <a href="buscar"><buttons class="btn btn-outline-dark fw-bold fs-4" style="margin-right: 20px;" type="submit">Buscar</buttons></a>
+                      <a href="<?php echo BASE_URL; ?>admin"><buttons class="btn btn-outline-dark fw-bold fs-4" style="margin-right: 20px;" type="submit">PLANEL ADMINISTRATIVO</buttons></a>
                     </form>
                   </div>
             </nav>          

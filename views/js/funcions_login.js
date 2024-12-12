@@ -1,16 +1,13 @@
-async function iniciar_sesion(params) {
+async function iniciar_sesion() {
     let usuario = document.querySelector('#usuario');
     let password = document.querySelector('#password');
     if (usuario=="" || password=="") {
         alert('campos vacios');
         return;
     }
-}
 
 try {
-    // capturamos datos del formulario
     const datos = new FormData(fom_login);
-    //enviar datos hacia el controlador
     let respuesta = await fetch(base_url + 'controller/Login.php?tipo=iniciar_sesion',{
         method: 'POST',
         mede: 'cors',
@@ -19,22 +16,21 @@ try {
     });
     json =  await respuesta.json();
     if (json.status) {
-        //swal("iniciar_sesion", json.mensaje,"succes");
-        location.replace(base_url+"nuvo-producto")
+        location.replace(base_url+'/Producto')
     }else{
         swal("iniciar_sesion", json.mensaje,"error");
     }
     console.log(json);
-    //console.log(respuesta);
-} catch (e) {
-    console.log("Oop, ocurrio un error" + e);
+    } catch (e) {
+        console.log("Oop, ocurrio un error" + e);
+    }
 }
 
 if (document.querySelector('#fom_login')) {
     //evita que se envie el formulario
-    let login = document.querySelector('#fom_login');
+    let fom_login = document.querySelector('#fom_login');
     fom_login.onsubmit = function (e){
-        e.preventdefaul();
+        e.preventDefault();
         iniciar_sesion();
     }
 } 
@@ -48,7 +44,7 @@ async function cerrar_sesion() {
         });
         json =  await respuesta.json();
         if (json.status) {
-            location.replace(base_url+"login");
+            location.replace(base_url+'/Login');
         }
     } catch (error) {
         console.log('Ocurrio un error' + errror);

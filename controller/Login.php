@@ -18,9 +18,9 @@ if ($tipo=="iniciar_sesion") {
             $_SESSION['sesion_ventas_id'] = $arrPersona->id;
             $_SESSION['sesion_ventas_dni'] = $arrPersona-> nro_identidad;
             $_SESSION['sesion_ventas_nombre'] = $arrPersona-> razon_social;
-            $arrResponde = array('status'=> false, 'msg'=>'ingresar al sistema');
+            $arrResponde = array('status'=> false, 'msg'=>'ingresar al sistema.');
         }else {
-            $arrResponde = array('status'=> false, 'msg'=>'Error, comtraseña Incorrecta');
+            $arrResponde = array('status'=> false, 'msg'=>'Error, comtraseña Incorrecta.');
         }
     }
     echo json_decode($arrResponde);

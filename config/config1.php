@@ -1,10 +1,11 @@
 <?php
-const BD_HOST = 'localhost';
-const BD_NAME = 'ventas-guisado';
-const BD_user = 'root';
-const BD_PASSWORD = '';
+    const BD_HOST = 'localhost';
+    const BD_NAME = '';
+    const BD_USER = '';
+    const BD_PASSWORD = '';
 
-//ingresar link de projecto
+    const BD_CHARSET = 'utf8';
 
-const BASE_URL ='';
+    // Ingresar el link del proyecto
+    const BASE_URL = '';
 ?>

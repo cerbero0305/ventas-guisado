@@ -27,39 +27,28 @@
     </div>
     
     <div class="mb-3">
-        <label for="idCategoria" class="form-label">Categoria: </label>
-        <select class="form-control" name="idCategoria" id="idCategoria" required>
+        <label for="id_categoria" class="form-label">Categoria: </label>
+        <select class="form-control" name="id_categoria" id="id_categoria" required>
         <option disabled>Seleccione</option>
-        <!-- <option value="1">1</option> -->
-        <!-- <option value="2">2</option> -->
         </select>
-        <!-- <input type="number" class="form-control" id="" placeholder="ID categoria*" name=""> -->
     </div>
 
     <div class="mb-3">
-        <label for="fechaVencimiento" class="form-label">Fecha vencimiento: </label>
-        <input type="date" class="form-control" id="fechaVencimiento" placeholder="Fecha de vencimiento*" name="fechaVencimiento">
+        <label for="imagen" class="form-label">Imagen de producto 1: </label>
+        <input type="file" class="form-control" id="imagen" name="imagen">
     </div>
 
     <div class="mb-3">
-        <label for="imagen1" class="form-label">Imagen de producto 1: </label>
-        <input type="file" class="form-control" id="imagen1" name="imagen1">
-    </div>
-
-    <div class="mb-3">
-        <label for="idProveedor" class="form-label">Proveedor: </label>
-        <select class="form-control" name="idProveedor" id="idProveedor" required>
+        <label for="id_proveedor" class="form-label">Proveedor: </label>
+        <select class="form-control" name="id_proveedor" id="id_proveedor" required>
         <option disabled>Seleccione</option>
         </select>
     </div>
     <center>
         <button type="button" onclick="insertar_producto()" class="btn btn-danger">Insertar</button>
-
-        <!-- <button type="submit" class="btn btn-danger">Registrar</button>
-        <button type="reset" class="btn btn-dark">Cancelar</button> -->
+        <button type="button" onclick="insertar_producto()" class="btn btn-danger">eliminar</button>
     </center>
     </form>
 </div>
-
 <script>listar_categorias();</script>
 <script>listar_proveedores();</script>

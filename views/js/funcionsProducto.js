@@ -14,12 +14,14 @@ async function listar_productos() {
                         <th>${cont}</th>
                         <td>${item.codigo}</td>
                         <td>${item.nombre}</td>
+                        <td>${item.precio}</td>
                         <td>${item.stock}</td>
                         <td>${item.id_categoria.nombre}</td>
-                        <td>${item.id_proveedor}</td>
+                        <td>${item.proveedor.razon_social}</td>
                         <td>${item.opciones}</td>
+                        <td></td>
                 `;
-                Document.querySelector('#tbl_productos').appendChild(nueva_fila);
+                document.querySelector('#tbl_producto').appendChild(nueva_fila);
             });
         }
         console.log(json);
@@ -29,7 +31,7 @@ async function listar_productos() {
 }
 
 if (document.querySelector('#tbl_productos')) {
-    
+    listar_productos();
 }
 
 async function registrar_producto() {
@@ -49,7 +51,7 @@ async function registrar_producto() {
     }
     try {
         // capturamos datos del formulario
-        const datos = new FormData(frmRegistrar);
+        const datos = new FormData(formInsertProducto);
         //enviar datos hacia el controlador
         let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=registrar',{
             method: 'POST',
@@ -70,33 +72,6 @@ async function registrar_producto() {
     }
 }
 
-async function listar_categorias() {
-    try{
-        let respuesta = await fetch(base_url +'controller/Categoria.php?tipo=listar');
-        console.log(respuesta);
-       json = await respuesta.json();
-
-       if(json.status){
-        let datos = json.contenido;
-        let contenido_select = '<option value="">Seleccione</option>';
-        datos.forEach(element => {
-            contenido_select += '<option value="' + element.id +'">' + element.nombre + '</option>';
-           /* $('#categoria').append($('<option />',{
-                text: ${element.nombre},
-                value:  ${element.id},
-
-            }));*/
-        });
-
-        document.getElementById('categoria').innerHTML = contenido_select;
-
-    }
-     console.log(respuesta);
-    }catch (e) {
-        console.log("Error al cargar categorias" + e);
-    } 
-}
-
 async function listar_proveedor() {
     try{
         let respuesta = await fetch(base_url +'controller/proveedor.php?tipo=listar');
@@ -104,16 +79,33 @@ async function listar_proveedor() {
        json = await respuesta.json();
        if(json.status){
         let datos = json.contenido;
-        let contenido_select = '<option value="">Seleccione</option>';
+        let contenido_select = '<option value="" disabled selected>Seleccione</option>';
         datos.forEach(element => {
             contenido_select += '<option value="' + element.id +'">' + element.razon_social + '</option>';
-           
         });
-        document.getElementById('proveedor').innerHTML = contenido_select;
+        document.getElementById('id_proveedor').innerHTML = contenido_select;
     }
      console.log(respuesta);
     }catch (e) {
         console.log("Error al cargar proveedor" + e);
+    }
+}
+
+async function listar_productos() {
+    try {
+        let respuesta = await fetch(base_url + '/controller/Producto.php?tipo=listarP');
+        json = await respuesta.json();
+        if (json.status) {
+            let datos = json.contenido;
+            let contenido_select = '<option value="" disabled selected>Seleccione</option>';
+            datos.forEach(element => {
+                contenido_select += '<option value="' + element.id + '">' + element.nombre + '</option>';
+            });
+            document.getElementById('id_producto').innerHTML = contenido_select;
+        }
+        console.log(respuesta);
+    }catch(e){
+        console.log("Error al cargar productos." + e);
     }
 }
 
@@ -125,22 +117,78 @@ async function ver_producto(id) {
             method: 'POST',
             mede: 'cors',
             cache: 'no-cache',
-            body: 'formData'
+            body: formData
         });
         json = await respuesta.json();
         if (json.status) {
             document.querySelector('#codigo').value = json.contenido.codigo;
             document.querySelector('#Nombre').value = json.contenido.Nombre;
             document.querySelector('#Detalle').value = json.contenido.Detalle;
-            document.querySelector('#codigo').value = json.contenido.codigo;
-            document.querySelector('#codigo').value = json.contenido.codigo;
-            document.querySelector('#codigo').value = json.contenido.codigo;
-            document.querySelector('#codigo').value = json.contenido.codigo;
+            document.querySelector('#precio').value = json.contenido.precio;
+            document.querySelector('#id_categoria').value = json.contenido.id_categoria;
+            document.querySelector('#id_proveedor').value = json.contenido.id_proveedor;
         } else {
-            window.location = base_url+"productos";
+            window.location = base_url + "verProducto";
         }
         console.log(json);
     } catch (error) {
         console.log("Oop ocurrio un error" + error);
+    }
+}
+
+async function actualizar_producto() {
+    const datos = new FormData(formUpdateProducto);
+    try {
+        let respuesta = await fetch(base_url + '/controller/Producto.php?tipo=actualizar', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            swal("Registro", json.mensaje, "success");
+        } else {
+            swal("Registro", json.mensaje, "error");
+        }
+        console.log(json);
+    } catch (e) {
+
+    }
+}
+
+async function eliminar_producto(id) {
+    swal({
+        title: "Estás seguro de que quieres eliminar este producto?",
+        text: "",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true
+    }).then((willDelete)=>{
+        if (willDelete) {
+            fnt_eliminar(id);
+        }
+    })
+}
+
+async function fnt_eliminar(id) {
+    const formdata = new FormData();
+    formdata.append('id_producto',id);
+    try {
+        let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=eliminar',{
+            method: 'POST',
+            mede: 'cors',
+            cache: 'no-cache',
+            body: formData
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            swal("Eliminar", "eliminado correctamente", "success");
+            document.querySelector('#fila'+id).rimove();
+        } else{
+            swal('Eliminar', 'Error al eliminar', 'warning'); 
+        }
+    } catch (error) {
+        console.log("Ocurrio un error" + error);
     }
 }

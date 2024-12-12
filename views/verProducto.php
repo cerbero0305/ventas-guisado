@@ -4,15 +4,18 @@
         <thead>
             <tr>
                 <th>Nro.</th>
+                <th>Codigo</th>
                 <th>Nombre</th>
-                <th>Detalles</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Categoria</th>
+                <th>Proveedor</th>
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody id="tbl_categoria">
+        <tbody id="tbl_producto">
         </tbody>
     </table>
 </div>
-<a href="<?php echo BASE_URL; ?>admin" class="btn btn-danger">Volver</a>
 </div>
-<script src="<?php echo BASE_URL; ?>/views/js/funcions_categoria.js"></script>
+<script src="<?php echo BASE_URL; ?>/views/js/funcionsProducto.js"></script>

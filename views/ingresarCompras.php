@@ -3,8 +3,8 @@
         <center><h3><b>Formulario de registro de compra</b></h3></center>
 
     <div class="mb-3">
-        <label for="idProveedor" class="form-label">Producto: </label>
-        <select class="form-control" name="idProducto" id="idProducto" required>
+        <label for="id_proveedor" class="form-label">Producto: </label>
+        <select class="form-control" name="id_producto" id="id_producto" required>
         <option disabled>Seleccione</option>
         </select>
     </div>
@@ -20,21 +20,13 @@
     </div>
 
     <div class="mb-3">
-        <label for="fecha" class="form-label">Fecha de compra: </label>
-        <input type="date" class="form-control" id="fecha" placeholder="Fecha*" name="fecha">
-    </div>
-
-    <div class="mb-3">
-        <label for="idPersona" class="form-label">Persona: </label>
-        <select class="form-control" name="idPersona" id="idPersona" required>
+        <label for="id_trabajador" class="form-label">Persona: </label>
+        <select class="form-control" name="id_trabajador" id="id_trabajador" required>
         <option disabled>Seleccione</option>
         </select>
     </div>
     <center>
-
         <button type="button" onclick="insertar_compra()" class="btn btn-danger">Insertar</button>
-        <!-- <button type="submit" class="btn btn-danger">Registrar</button>
-        <button type="reset" class="btn btn-dark">Cancelar</button> -->
     </center>
     </form>
 </div>

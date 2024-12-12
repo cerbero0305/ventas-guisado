@@ -19,4 +19,4 @@
     </table>
 </div>
 </div>
-<script src="<?php echo BASE_URL; ?>/views/js/function_persona.js"></script>
+<script src="<?php echo BASE_URL; ?>/views/js/funcions_persona.js"></script>

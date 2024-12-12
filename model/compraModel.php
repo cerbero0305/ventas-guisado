@@ -8,9 +8,9 @@ class CompraModel{
         $this->conexion = $this->conexion->connect();
     }
 
-    public function registrarCompra($idProducto, $cantidad, $precio, $fecha, $idPersona){
+    public function registrarCompra($id_producto, $cantidad, $precio, $id_trabajador){
         // Orden de la base de datos
-        $sql = $this->conexion->query("CALL registrar_compra('{$idProducto}', '{$cantidad}', '{$precio}', '{$fecha}', '{$idPersona}')");
+        $sql = $this->conexion->query("CALL insertcompras('{$id_producto}', '{$cantidad}', '{$precio}', '{$id_trabajador}')");
         $sql = $sql->fetch_object();
         return $sql;
     }
@@ -23,6 +23,5 @@ class CompraModel{
         }
         return $arrRespuesta;
     }
-
 }
 ?>

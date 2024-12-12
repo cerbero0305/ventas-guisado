@@ -17,15 +17,15 @@
                 </a>
               </div>
                   <div class="container-fluid col-6" style="justify-content: end;">
-                    <form class="d-flex" role="search">
+                    <form1 class="d-flex" role="search">
                       <a href="informacion.html" style="margin-right: 20px;"><img src="./img/inicio.png"  height="50px" alt=""></a>
                       <buttons class="btn btn-outline-dark fw-bold fs-4" style="margin-right: 20px;" type="submit">Buscar</buttons>
-                    </form>
+                    </form1>
                   </div>
             </nav>          
       </div>
       <script> const base_url = '<?php echo BASE_URL; ?>'; </script>
-      <div id="fom_login">
+      <div>
         <div class="cuerpo" style="display: flex; justify-content: center; margin-top: 40px;">
         <div class="login" style="display: flex; background-color: rgb(212, 212, 212); justify-content: center; align-items: center; flex-direction: column; border-radius: 10px; height: 635px; width: 60%;">
             <p class="text-start text-uppercase fs-2 fw-bold m-0 ">Inicio de sesión en snaptube</p>
@@ -34,12 +34,13 @@
             <button type="button" class="btn btn-secondary" style="width: 300px; margin: 5px;">Continuar con el numero de telefono</button>
             <div class="linea" style="margin: 10px 0 10px 0; width: 400px; height: 2px; background-color: black;"></div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Correo electrónico o nombre de usuario
-                </label>
-                <input type="email" class="form-control" name="usuario" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
-                <label for="exampleFormControlInput1" class="form-label">Contraseña
-                </label>
-                <input type="email" class="form-control" name="password" id="exampleFormControlInput1" placeholder="Contraseña">
+              <form id="fom_login">
+                <label for="usuario" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" name="usuario"  placeholder="nombre de usuario">
+                
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="password"  placeholder="Contraseña">
+              </form>
                 <div class="form-check form-switch" style="display: flex; justify-content: center;">
                     <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Recordar</label>
@@ -51,6 +52,7 @@
                   <div class="linea" style="margin: 10px 0 10px 0; width: 400px; height: 2px; background-color: black;"></div>
                   <p class="text-start text-uppercase m-0 ">¿No tienes una cuenta? Regístrate en SNAPTUBE</p>
               </div>
+              
         </div>
       </div>
       </div>

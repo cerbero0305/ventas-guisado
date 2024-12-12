@@ -1,6 +1,6 @@
 <div id="form-control">
     <form action="">
-        <center><h3><b>Formulario de registro de pago</b></h3></center>
+        <center><h3><b>Actualizar información de pago</b></h3></center>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">ID de venta: </label>
         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="ID de venta*" name="idVenta">

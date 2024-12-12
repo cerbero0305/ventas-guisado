@@ -16,7 +16,7 @@ async function listar_personas() {
     }
 }
 
-async function listar_personas_admin() {
+async function obtener_personas_admin() {
     try {
         let respuesta = await fetch(base_url + '/controller/Persona.php?tipo=listarAdmin');
         json = await respuesta.json();
@@ -56,8 +56,8 @@ if (document.querySelector('#tbl_persona')) {
     listar_personas_admin();
 }
 
-async function insertar_persona() {
-    let nro_identidad = document.getElementById('nro_identidad').value;
+async function registrarPersona() {
+    let nro_identidad = document.querySelector('#nro_identidad').value;
     let razon_social = document.querySelector('#razon_social').value;
     let telefono = document.querySelector('#telefono').value;
     let correo = document.querySelector('#correo').value;
@@ -67,21 +67,17 @@ async function insertar_persona() {
     let cod_postal = document.querySelector('#cod_postal').value;
     let direccion = document.querySelector('#direccion').value;
     let rol = document.querySelector('#rol').value;
-    let password = document.querySelector('#nroIdentidad').value;
+    let contraseña = document.querySelector('#nro_identidad').value;
     let estado = document.querySelector('#estado').value;
     let fecha_reg = document.querySelector('#fecha_reg').value;
     
-    if (nro_identidad == "" || razon_social == "" || telefono == "" || correo == "" || departamento == "" || provincia == "" || distrito == "" || cod_postal == "" || direccion == "" || rol == "" || password == "" || estado == "" || fecha_reg == "") {
+    if (nro_identidad == "" || razon_social == "" || telefono == "" || correo == "" || departamento == "" || provincia == "" || distrito == "" || cod_postal == "" || direccion == "" || rol == "" || contraseña == "" || estado == "" || fecha_reg == "") {
         alert("Error, campos vacíos");
         return;
     }
-
-// Mostrar error en caso de codigo roto
     try {
         // Capturar los datos del formulario y guardarlos en la constante "datos"
         const datos = new FormData(formInsertPersona);
-        // Enviar datos hacia el controlador
-        // await = promesa
         let respuesta = await fetch(base_url + '/controller/Persona.php?tipo=registrar',{
             method: 'POST',
             mode: 'cors',

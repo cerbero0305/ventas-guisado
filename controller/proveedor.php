@@ -6,8 +6,6 @@ $objproveedor = new proveedorModel();
 
 $tipo = $_REQUEST['tipo'];
 
-
-
 if ($tipo == "listar"){
 
     $arr_Respuesta =array('status'=>false, 'contenido'=>'');

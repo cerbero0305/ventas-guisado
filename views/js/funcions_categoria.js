@@ -1,4 +1,4 @@
-async function insertar_categoria() {
+async function registrarCategoria() {
     let nombre = document.getElementById('nombre').value;
     let detalle = document.querySelector('#detalle').value;
     
@@ -6,7 +6,6 @@ async function insertar_categoria() {
         alert("Error, campos vacíos");
         return;
     }
-
 // Mostrar error en caso de codigo roto
     try {
         // Capturar los datos del formulario y guardarlos en la constante "datos"
